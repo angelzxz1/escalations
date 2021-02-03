@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#exte">Extensions</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#pmnt">Payment Allocation</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#crer">Credit Report</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#ttlr">Title Tracket Request</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#volr">Voluntary Surrender</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#fees">Fees Removal</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#rqad">Request Additional Documentation</button>
+	<button data-toggle="collapse" class="btn btn-primary" data-target="#otor">Other type of Request</button>
+
+	<div id="exte" class="collapse pl-4 pt-2">
+		<button data-toggle="collapse" class="btn btn-success" data-target="#een">Extension Exception</button>
+		<button data-toggle="collapse" class="btn btn-success" data-target="#eep">Extension Exception +8</button>
+		<button data-toggle="collapse" class="btn btn-success" data-target="#rsf">Resend the Form</button>
+		<button data-toggle="collapse" class="btn btn-success" data-target="#fns">Form not Send</button>
+		<button data-toggle="collapse" class="btn btn-success" data-target="#exc">Extension Cancel</button>
+		<div id="een" class="collapse pl-4 pt-2">
+			<label for="sups1">Select your sup</label><br>
+			<select id="sups1" name="sups">
+				<option value="Maria.Delahoz@exeterfinance.com">Maca</option>
+				<option value="Claudia.Manjarres@exeterfinance.com">Claudia</option>			
+			</select>
+  			<br><br>
+
+			<textarea rows="20" cols="100" style="text-align: left;" id="bext">
+EXTENSION EXCEPTION 
+
+RFD: 
+Number Months Extended: 
+Garage Address: 
+NDD: 
+Email or Fax: 
+Information communicated to the customer:
+* Extensions not covered by Gap
+* Extension agreement form needs to be signed and returned
+* Daily interest accrues
+* Maturity Date is extended: </textarea>
+			<div onmousedown="
+				var manager = document.getElementById('sups1').value;
+				var subject= 'EXTENSION EXCEPTION';
+		        var body = document.getElementById('bext').value ;
+
+		        console.log(body);
+		        var uri = 'mailto:'+manager+'?subject=';
+		        uri += encodeURIComponent(subject);
+		        uri += '&body=';
+		        uri += encodeURIComponent(body);
+		        window.open(uri);
+			" >Create</div>
+		</div>
+		
+
+
+
+
+		<div id="eep" class="collapse pl-4 pt-2">
+			<label for="sups2">Select your sup</label><br>
+			<select id="sups2" name="sups">
+				<option value="Maria.Delahoz@exeterfinance.com">Maca</option>
+				<option value="Claudia.Manjarres@exeterfinance.com">Claudia</option>			
+			</select>
+  			<br><br>
+
+			<textarea rows="20" cols="100" style="text-align: left;">
+EXCEPTION EXTENSION  8+
+
+ACCOUNT #:
+SW: 
+CURRENT DPD: 
+# OF MTHS REQUESTED: 
+# OF CURRENT EXT ON ACCOUNT: 
+RFD: 
+POE:                   
+PHYSICAL ADDRESS:
+COVID-19: ( yes or no)
+RECEIVING STIM PKG?: ( yes or no)
+OTHER INCOME: ( yes or no)
+NDD IF APPROVED:
+CAN THEY MAKE NEXT PAYMENT?: ( yes or no)
+EXT FORM NEEDED: ( yes or no)
+BUYER EMAIL/FAX: xyz2020@gmail.com
+ADVISED - EXT ARE NOT GUARANTEED: YES
+SENT FOR APPROVAL TO: 
+
+ADVISED BUYER OF THE FOLLOWING:
+GAP DOESN'T COVER EXTENDED MONTHS
+DAILY INTEREST ACCUES
+MATURITY DATE IS EXTENDED
+EXT FORM NEED TO BE SIGNED AND RETURNED (IF APPLICABLE): </textarea>
+
+			<!--<div onmousedown="
+			var manager = document.getElementById('sups2').value;
+			var subject= 'EXTENSION EXCEPTION';
+	        var body = document.getElementById('bext').value ;
+
+	        console.log(body);
+	        var uri = 'mailto:'+manager+'?subject=';
+	        uri += encodeURIComponent(subject);
+	        uri += '&body=';
+	        uri += encodeURIComponent(body);
+	        window.open(uri);
+		" >Enviar</div>-->
+		</div>
+
+
+
+		<div id="rsf" class="collapse pl-4 pt-2">
+			
+		</div>
+
+
+
+		<div id="fns" class="collapse pl-4 pt-2">
+			
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+
+
+	<div id="pmnt" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<div id="crer" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<div id="ttlr" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<div id="volr" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<div id="fees" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<div id="rqad" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<div id="otor" class="collapse">
+		
+
+	</div>
+
+
+
+
+
+	<!--
+	<input type="radio" name="manager" value="Maria.Delahoz@exeterfinance.com">Maca
+	<input type="radio" name="manager" value="Claudia.Manjarres@exeterfinance.com">Tigresa 
+	<p><a href="javascript:SendLinkByMail()">Email link to this page</a></p> -->
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+	    function SendLinkByMail() {
+	        var subject= "Interesting Information";
+	        var body = "I thought you might find this information interesting:\r\n\r\n<";
+
+	        //body += window.location.href;
+	        body += ">";
+	        console.log(body);
+	        var uri = "mailto:?subject=";
+	        uri += encodeURIComponent(subject);
+	        uri += "&body=";
+	        uri += encodeURIComponent(body);
+	        window.open(uri);
+	    }
+	</script>
+</body>
+</html>
